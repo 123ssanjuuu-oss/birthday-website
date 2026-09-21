@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title> En Thangathukku Iniya Pirandhanaal Vaazhthukkal ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Great+Vibes&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- =========================
+     MUSIC
+========================= -->
+
+<audio id="bgMusic" loop>
+    <source src="music/birthday.mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()">
+    🎵
+</button>
+
+
+<!-- =========================
+     RAIN
+========================= -->
+
+<div class="rain" id="rain"></div>
+
+<div class="hearts" id="hearts"></div>
+
+
+<!-- =========================
+     LOADING
+========================= -->
+
+<section id="loadingScreen" class="screen loading-screen">
+
+    <div class="loader-content">
+
+        <div class="small-text">
+            Unakkaaga oru siru parisu kaathirukkiradhu... ❤️
+        </div>
+
+        <div id="countdown" class="countdown">
+            3
+        </div>
+
+        <h1 id="loadingTitle">
+            En Thangathukku
+        </h1>
+
+        <p id="loadingName">
+            Iniya Pirandhanaal Vaazhthukkal ❤️
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PASSWORD
+========================= -->
+
+<section id="passwordScreen" class="screen password-screen hidden">
+
+    <div class="glass-card password-card">
+
+        <div class="lock-icon">
+            🔐
+        </div>
+
+        <h1>Ungalakkaaga Oru Chinna Visesham Vecheerukken ❤️</h1>
+
+        <p>
+            Indha Viseshathai Oruvar Mattum Dhaan Thirakka Mudiyum... ❤️
+        </p>
+
+        <p class="hint">
+           Kurippu: Nee Love Panra Aalu Peru ❤️
+        </p>
+
+        <input
+            type="password"
+            id="passwordInput"
+            placeholder="Enter password"
+        >
+
+        <button class="luxury-btn" onclick="checkPassword()">
+            Ippa Thirandhu Paakalaam ❤️
+        </button>
+
+        <p id="passwordError"></p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     MAIN WEBSITE
+========================= -->
+
+<main id="mainWebsite" class="hidden">
+
+
+<!-- =========================
+     PAGE 1
+========================= -->
+
+<section class="page hero-page">
+
+    <div class="hero-content">
+
+       <p class="eyebrow">
+    ✦ Unakkaaga Oru Chinna Visesham ✦
+</p>
+
+<h1>
+    Innaiku Oru<br>
+    <span>Sirappana Naal</span>
+</h1>
+
+<p class="hero-description">
+    Yenna na, innaiku enakku romba pidicha
+    oruvaroda pirandhanaal. ❤️
+</p>
+
+        <div class="gift-box" onclick="openGift('birthdayGift')">
+
+            <div class="gift-lid"></div>
+
+            <div class="gift-body">
+                <div class="gift-ribbon"></div>
+            </div>
+
+            <div class="gift-bow">
+                <span></span>
+                <span></span>
+            </div>
+
+        </div>
+
+        <p class="click-text">
+            Indha Parisai Thattungga 🎁
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGE 2
+========================= -->
+
+<section class="page birthday-page">
+
+    <div class="section-title">
+
+        <p>INDHA NAAL UNAKKUTHAA</p>
+
+        <h2>
+            Iniya Pirandhanaal Vaazhthukkal
+            <span>Thangom</span> ❤️
+        </h2>
+
+    </div>
+
+
+    <div class="birthday-layout">
+
+        <div class="birthday-message">
+
+            <span class="quote-mark">“</span>
+
+            <p> Innaiku verum innoru naal illa.
+        Romba sirappana oruthar indha ulagathukku
+        vandha naal.</p>
+
+<h2>
+    
+        En vaazhkaiyil neenga irukkuradhu
+        enakku romba santhosham.
+    <span>Thangom</span> ❤️
+</h2>
+
+           <div class="signature">
+    Ungkooda Eppavum,<br>
+    <strong>Naan ❤️</strong>
+    
+</div>
+
+
+        <div class="photo-stack">
+
+            <img src="photos/photo1.jpeg" class="stack-photo photo-a">
+            <img src="photos/photo2.jpg" class="stack-photo photo-b">
+            <img src="photos/photo3.jpg" class="stack-photo photo-c">
+
+        </div>
+
+    </div>
+
+
+    <button class="next-btn" onclick="scrollToSection('letterPage')">
+    Adutha Pakkam ↓
+</button>
+
+</section>
+
+
+<!-- =========================
+     PAGE 3 LETTER
+========================= -->
+
+<section id="letterPage" class="page letter-page">
+
+    <div class="section-title">
+
+        <p>EN MANASULA IRUNDHU</p>
+
+        <h2>
+            En Manasula Irundhu
+            <span>❤️</span>
+        </h2>
+
+    </div>
+
+
+    <div class="envelope-container" onclick="openLetter()">
+
+        <div class="envelope">
+
+            <div class="envelope-flap"></div>
+
+            <div class="letter-paper" id="letterPaper">
+
+                <h3>En Anbaan Thangom,</h3>
+
+                <p>
+                    En vaazhkaiyila enakku romba pidicha
+                    orutharaana ungalukku iniya pirandhanaal
+                    vaazhthukkal. ❤️
+                </p>
+
+                <p>
+                    Neenga enakku kudutha ovvoru sirippukkum,
+                    namma serndhu pagirndha azhagaana ninaivugalukkum,
+                    namma serndhu kazhicha ovvoru chinna nerathukkum
+                    romba nandri.
+                </p>
+
+                <p>
+                    Ungaloda vaazhkai eppavum santhosham,
+                    vetri, nimmadhi-nu ellame niraindhu irukkanum.
+                    Neenga aasappadra ellame ungalukku kidaikkanum-nu
+                    naan manasaara aasappaduren. ❤️
+                </p>
+
+                <p>
+                    Vaazhkai namma rendu peraiyum enge kondu ponaalum,
+                    en manasula ungalukkunu eppavum oru
+                    sirappana idam irukkum.
+                </p>
+
+                <p class="love-ending">
+                    Iniya Pirandhanaal Vaazhthukkal,
+                    En Anbaanavar ❤️
+                </p>
+
+                <p class="from">
+                    Eppavum Unakkaga,<br>
+                    <strong>Naan ❤️</strong>
+                </p>
+
+            </div>
+
+            <div class="envelope-front"></div>
+
+        </div>
+
+    </div>
+
+    <p class="click-envelope">
+        En Manasula Irukkuradha Paakka
+        Indha Cover-a Thottu Paaru 💌
+    </p>
+
+</section>
+
+<!-- =========================
+     PAGE 4 SURPRISES
+========================= -->
+
+<section class="page surprises-page">
+
+    <div class="section-title">
+
+        <p>INNUM KONJAM IRUKKU</p>
+
+        <h2>
+            Innum Sila <span>Vishesham</span> 🎁
+        </h2>
+
+    </div>
+
+
+    <div class="surprise-grid">
+
+        <div class="surprise-card" onclick="showSurprise(1)">
+
+            <div class="mini-gift">🎁</div>
+
+            <h3>Oru Chinna Anbu</h3>
+
+            <p>Idha Thirandhu Paaru</p>
+
+        </div>
+
+
+        <div class="surprise-card" onclick="showSurprise(2)">
+
+            <div class="mini-gift">🎁</div>
+
+            <h3>Oru Ninaivu</h3>
+
+            <p>Idha Thirandhu Paaru</p>
+
+        </div>
+
+
+        <div class="surprise-card" onclick="showSurprise(3)">
+
+            <div class="mini-gift">🎁</div>
+
+            <h3>Oru Vaakkurudhi</h3>
+
+            <p>Idha Thirandhu Paaru</p>
+
+        </div>
+
+
+        <div class="surprise-card" onclick="showSurprise(4)">
+
+            <div class="mini-gift">🎁</div>
+
+            <h3>En Parisu</h3>
+
+            <p>Idha Thirandhu Paaru</p>
+
+        </div>
+
+    </div>
+
+
+    <div id="surpriseMessage" class="surprise-message"></div>
+
+</section>
+
+
+<!-- =========================
+     PAGE 5 EN PARISU
+========================= -->
+
+<section class="page gift-page">
+
+    <div class="section-title">
+
+        <p>UNAKKAGA MATTUM</p>
+
+        <h2>
+            Unakkaga En Parisu
+            <span>❤️</span>
+        </h2>
+
+    </div>
+
+
+    <div class="gift-list">
+
+        <div class="gift-item">
+            <span>01</span>
+            <div>
+                <h3>En Anbu</h3>
+                <p>Eppavum Ungala Paathukkira Oru Anbu Manasu.</p>
+            </div>
+            <span>❤️</span>
+        </div>
+
+
+        <div class="gift-item">
+            <span>02</span>
+            <div>
+                <h3>Namma Ninaivugal</h3>
+                <p>Namma Rendu Perum Serndhu Pagirndha Azhagaana Ninaivugal.</p>
+            </div>
+            <span>📸</span>
+        </div>
+
+
+        <div class="gift-item">
+            <span>03</span>
+            <div>
+                <h3>En Vaakkurudhi</h3>
+                <p>Innum Neraya Azhagaana Ninaivugalai Ungaloda Serndhu Uruvaakka.</p>
+            </div>
+            <span>💍</span>
+        </div>
+
+
+        <div class="gift-item">
+            <span>04</span>
+            <div>
+                <h3>Indha Visesham</h3>
+                <p>Ungalukkaga Naan Aasaiyoda Seidha Oru Chinna Ninaivu.</p>
+            </div>
+            <span>💻</span>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGE 6 HEART
+========================= -->
+
+<section class="page heart-page">
+
+    <p class="eyebrow">
+        KADASIYA Oru Visesham
+    </p>
+
+    <h2>
+        En Manasai Thottu Paaru
+    </h2>
+
+    <button class="big-heart" onclick="openHeart()">
+        ❤️
+    </button>
+
+    <div id="heartMessage" class="heart-message">
+
+        <div class="cartoon">
+            🧸
+        </div>
+
+        <div class="speech-bubble">
+            Iniya Pirandhanaal Vaazhthukkal Thangom! 🎂❤️
+            <br>
+            Naan Ungala Romba Nesikkiren!
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGE 7 MEMORY BOOK
+========================= -->
+
+<section class="page memory-page">
+
+    <div class="section-title">
+
+        <p>NAMMA CHINNA ULAGAM</p>
+
+        <h2>
+            Namma Ninaivu <span>Puthagam</span> 📖
+        </h2>
+
+    </div>
+
+
+    <div class="book">
+
+        <div class="book-page" id="bookPage">
+
+            <div class="memory-number">
+                01 / 10
+            </div>
+
+            <img
+                id="memoryImage"
+                src="photos/photo1.jpeg"
+                alt="Ninaivu"
+            >
+
+            <h3 id="memoryTitle">
+                Iniya Pirandhanaal Vaazhthukkal ❤️
+            </h3>
+
+            <p id="memoryText">
+                Eppavum En Manasula Irukkura Oru Azhagaana Ninaivu.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="book-controls">
+
+        <button onclick="previousMemory()">
+            ←
+        </button>
+
+        <span>
+            Thottu Paaru
+        </span>
+
+        <button onclick="nextMemory()">
+            →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PAGE 8 PHOTO HEART
+========================= -->
+
+<section class="page photo-heart-page">
+
+    <div class="section-title">
+
+        <p>NAMMA CHINNA CHINNA NERANGAL</p>
+
+        <h2>
+            En Manasula Eppavum Irukkura
+            <span>Ninaivugal</span>
+        </h2>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FINAL
+========================= -->
+
+<section class="page final-page">
+
+    <div class="final-content">
+
+        <div class="final-heart">
+            ❤️
+        </div>
+
+        <p class="eyebrow">
+            UNAKKAGA
+        </p>
+
+        <h1>
+            Iniya Pirandhanaal Vaazhthukkal
+            <span>Thangom</span>
+        </h1>
+
+        <p class="final-message">
+
+            Evvalavu Pirandhanaal Vandhaalum Ponaalum,
+            Ovvoru Varushamum Neenga Aasappadra
+            Ellame Ungalukku Kidaikkanum-nu
+            Naan Manasaara Aasappaduren.
+
+            <br><br>
+
+            En Vaazhkaiyila Neenga Oru Azhagaana
+            Paguthiyaa Irukkuradhukku Romba Nandri.
+
+            <br><br>
+
+            Neenga Eppavum Enakku Romba Mukkiyam.
+            En Manasula Ungalukku Eppavum Oru
+            Sirappana Idam Irukkum. ❤️
+
+        </p>
+
+
+        <div class="forever">
+            Eppavum Unakkaga ❤️
+        </div>
+
+
+        <div class="video-section">
+
+            <div class="video-box">
+                <h3>Namma Chinna Ninaivu ❤️</h3>
+
+                <video controls playsinline>
+                    <source src="videos/video1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+
+            <div class="video-box">
+                <h3>Innum Oru Azhagaana Ninaivu ❤️</h3>
+
+                <video controls playsinline>
+                    <source src="videos/video2.mp4" type="video/mp4">
+                </video>
+            </div>
+
+        </div>
+
+</section>
+
+
+</main>
+
+
+<!-- =========================
+     MODAL
+========================= -->
+
+<div id="modal" class="modal">
+
+    <div class="modal-content">
+
+        <button class="close-modal" onclick="closeModal()">
+            ×
+        </button>
+
+        <div id="modalContent"></div>
+
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
